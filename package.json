@@ -1,0 +1,15 @@
+{
+    "name": "leetcode_solutions",
+    "version": "0.0.1",
+    "type": "module",
+    "author": "Nickolay Platonov",
+    "license": "MIT",
+    "engines": {
+        "node": ">=12.21.0"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "typescript": "^5.9.3"
+    }
+}

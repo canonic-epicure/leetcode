@@ -1,0 +1,29 @@
+{
+    "compilerOptions" : {
+        "importHelpers"             : true,
+        "experimentalDecorators"    : true,
+
+        "noImplicitThis"            : true,
+        "strictBindCallApply"       : true,
+        "strictPropertyInitialization" : false,
+
+        "target"                    : "es2017",
+        "sourceMap"                 : false,
+
+        "lib"                       : [
+            "esnext",
+        ],
+
+        "module"                    : "esnext",
+        "moduleResolution"          : "node",
+
+        "allowSyntheticDefaultImports"    : true
+    },
+
+    "include" : [
+        "src/**/*.ts",
+    ],
+
+    "exclude" : [
+    ]
+}
