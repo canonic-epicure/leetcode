@@ -28,3 +28,5 @@ function maxProfit(prices: number[]): number {
 
     return max_profit_global
 };
+
+export {}
