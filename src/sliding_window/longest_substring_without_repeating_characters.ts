@@ -11,10 +11,8 @@ function lengthOfLongestSubstring(s: string): number {
         const r_char = s[ r - 1 ]
 
         if (seen.has(r_char)) {
-            let l_char
-
             do {
-                l_char = s[ l ]
+                const l_char = s[ l ]
                 l++
                 if (l_char !== r_char)
                     seen.delete(l_char)
