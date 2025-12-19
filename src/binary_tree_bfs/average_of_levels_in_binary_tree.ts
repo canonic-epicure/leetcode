@@ -28,3 +28,5 @@ function averageOfLevels(root: TreeNode | null): number[] {
 
     return res
 };
+
+export {}
