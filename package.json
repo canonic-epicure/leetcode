@@ -8,6 +8,7 @@
         "node": ">=12.21.0"
     },
     "dependencies": {
+        "@datastructures-js/heap": "4.3.7"
     },
     "devDependencies": {
         "typescript": "^5.9.3",

@@ -1,29 +1,3 @@
-// function maxSubArray(nums: number[]): { best: number, l: number, r: number } {
-//     let current = nums[0]
-//     let cur_l = 0
-//     let best = current
-//     let l = 0
-//     let r = 0
-//
-//     for (let i = 1; i < nums.length; i++) {
-//         const el = nums[ i ]
-//
-//         if (el >= current + el) {
-//             cur_l = i
-//         }
-//
-//         current = Math.max(el, current + el)
-//         best = Math.max(best, current)
-//
-//         if (best > current) {
-//             l = cur_l
-//             r = i
-//         }
-//     }
-//
-//     return { best, l, r }
-// };
-
 function maxSubarraySumCircular(nums: number[]): number {
     if (nums.length === 1) return nums[0]
 
