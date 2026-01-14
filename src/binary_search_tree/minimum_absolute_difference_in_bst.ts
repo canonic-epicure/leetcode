@@ -36,4 +36,3 @@ function getMinimumDifference(root: TreeNode | null): number {
     return min
 };
 
-export {}

@@ -53,4 +53,3 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
     return res[0]
 };
 
-export {}

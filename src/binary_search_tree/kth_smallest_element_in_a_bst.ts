@@ -36,4 +36,3 @@ function kthSmallest(root: TreeNode | null, k: number): number {
     return res
 };
 
-export {}

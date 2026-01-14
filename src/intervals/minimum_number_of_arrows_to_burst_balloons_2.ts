@@ -24,6 +24,6 @@ function findMinArrowShots(pts: [number, number][]): number {
     return count
 };
 
-export {}
+
 
 console.log(findMinArrowShots([[10,16],[2,8],[1,6],[7,12]]))

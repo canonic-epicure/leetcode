@@ -33,4 +33,3 @@ function isValidBST(root: TreeNode | null): boolean {
     return res !== false
 };
 
-export {}

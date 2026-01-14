@@ -29,4 +29,3 @@ function maxProfit(prices: number[]): number {
     return total_profit
 };
 
-export {}

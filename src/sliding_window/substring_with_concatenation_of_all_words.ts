@@ -58,4 +58,3 @@ function findSubstring(s: string, words: string[]): number[] {
 
 console.log(findSubstring("barfoothefoobarman", ["foo","bar"])) // [0,9]
 
-export {}

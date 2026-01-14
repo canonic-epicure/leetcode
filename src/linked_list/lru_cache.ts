@@ -108,7 +108,7 @@ class LRUCache {
  * obj.put(key,value)
  */
 
-export {}
+
 
 const lRUCache = new LRUCache(2);
 lRUCache.put(1, 1); // cache is {1=1}

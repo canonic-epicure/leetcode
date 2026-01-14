@@ -48,4 +48,3 @@ function construct(grid: number[][]): _Node | null {
     return do_construct(grid, 0, 0, grid.length)
 };
 
-export {}

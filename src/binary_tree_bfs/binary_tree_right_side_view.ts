@@ -29,4 +29,3 @@ function rightSideView(root: TreeNode | null): number[] {
     return res
 };
 
-export {}

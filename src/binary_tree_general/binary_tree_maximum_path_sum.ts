@@ -68,7 +68,7 @@ function maxPathSum(root: TreeNode | null): number {
     return stat.own_max
 };
 
-export {}
+
 
 
 const root = new TreeNode(

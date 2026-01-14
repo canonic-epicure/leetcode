@@ -31,4 +31,3 @@ function zigzagLevelOrder(root: TreeNode | null): number[][] {
     return res
 };
 
-export {}

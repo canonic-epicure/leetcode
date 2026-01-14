@@ -38,4 +38,3 @@ function buildTree(inorder: number[], postorder: number[]): TreeNode | null {
 
 console.log(buildTree([9,3,15,20,7], [9,15,7,20,3]))
 
-export {}

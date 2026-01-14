@@ -30,4 +30,3 @@ function cloneGraph(node: _Node | null): _Node | null {
     return do_clone(node)
 };
 
-export {}

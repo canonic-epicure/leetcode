@@ -1,4 +1,4 @@
-export {}
+
 
 type TrieNode = Map<string, TrieNode | '#'>
 
