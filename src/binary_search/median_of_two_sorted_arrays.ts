@@ -1,43 +1,44 @@
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
-    const l1 = 0
-    const r1 = nums1.length
+  // Ensure nums1 is the smaller array to binary search on it
+  let A = nums1, B = nums2;
+  if (A.length > B.length) [A, B] = [B, A];
 
-    const l2 = 0
-    const r2 = nums2.length
+  const m = A.length, n = B.length;
+  const total = m + n;
+  const half = Math.floor((total + 1) / 2);
 
-    while (l1 < r1 || l2 < r2) {
-        const m1 = Math.floor((l1 + r1) / 2)
-        const m2 = Math.floor((l2 + r2) / 2)
+  let lo = 0, hi = m;
 
+  const NEG_INF = Number.NEGATIVE_INFINITY;
+  const POS_INF = Number.POSITIVE_INFINITY;
 
+  while (lo <= hi) {
+    const i = Math.floor((lo + hi) / 2); // cut in A
+    const j = half - i;                  // cut in B
+
+    const Aleft  = i > 0 ? A[i - 1] : NEG_INF;
+    const Aright = i < m ? A[i]     : POS_INF;
+
+    const Bleft  = j > 0 ? B[j - 1] : NEG_INF;
+    const Bright = j < n ? B[j]     : POS_INF;
+
+    // Correct partition found
+    if (Aleft <= Bright && Bleft <= Aright) {
+      const leftMax = Math.max(Aleft, Bleft);
+      if (total % 2 === 1) return leftMax;
+
+      const rightMin = Math.min(Aright, Bright);
+      return (leftMax + rightMin) / 2;
     }
 
-    return 0
-};
+    // Move partition
+    if (Aleft > Bright) {
+      hi = i - 1; // i too big
+    } else {
+      lo = i + 1; // i too small
+    }
+  }
 
-console.log(
-    // [1, 2, 3, 4, 5, 6, 7, 8], (4 + 5) / 2 = 4.5
-    findMedianSortedArrays(
-        [1, 3, 5, 7], // (3 + 5) / 2 = 4
-        [2, 4, 6, 8], // (4 + 6) / 2 = 5
-    ),
-
-    // [1, 3, 4, 5, 6, 7], (4 + 5) / 2 = 4.5
-    findMedianSortedArrays(
-        [1, 3, 5, 7], // (3 + 5) / 2 = 4
-        [4, 6], // (4 + 6) / 2 = 5
-    ),
-
-    // [1, 2, 3, 7, 8, 11, 15, 18, 21, 26 ], (8 + 11) / 2 = 9.5
-    findMedianSortedArrays(
-        [1, 2, 7, 11, 18, 21], // (7 + 11) / 2 = 9
-        [3, 8, 15, 26], // (8 + 15) / 2 = 11.5
-    ),
-
-    // [1, 2, 3, 7, 8, 11, 15, 18, 21, 26 ], (8 + 11) / 2 = 9.5
-    findMedianSortedArrays(
-        [2, 3, 8, 11, 15, 18],
-        [1, 7, 21, 26],
-    )
-
-)
+  // Should be unreachable for valid inputs
+  throw new Error("Invalid input");
+}
